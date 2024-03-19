@@ -1,0 +1,7 @@
+.quantity-picker button {
+    display: inline-block;
+}
+
+.quantity-picker label {
+    margin-inline: 10px;
+}
