@@ -1,0 +1,45 @@
+.bio {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.bio div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    margin-inline: auto;
+    max-width: 1100px;
+    padding-inline: 20px;
+}
+
+.bio img {
+    height: 525px;
+    border-radius: 20px;
+    filter: drop-shadow(lightgrey 1rem 1rem 10px);
+}
+
+.bio h2,
+.bio p {
+    text-align: left;
+}
+
+.bio p {
+    line-height: 2rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.bio h2 {
+    font-family: "Noto Serif", serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+}
+
+.bio h2 span {
+    text-decoration: underline;
+    text-decoration-color: #7d8cc4;
+}

@@ -13,6 +13,12 @@ function ShoppingList() {
         setNewItem("");
     }
 
+    function deleteAll() {
+        setList([]);
+    }
+
+    function removeItem() {}
+
     return (
         <div className="shopping-list page">
             <h3>Shopping List</h3>
@@ -25,10 +31,14 @@ function ShoppingList() {
                 <button onClick={addItem} className="">
                     Add
                 </button>
+                <button onClick={deleteAll}>Clear</button>
             </div>
             <ul>
                 {list.map((item, index) => (
-                    <li key={index}>{item}</li>
+                    <div>
+                        <li key={index}>{item}</li>
+                        <button onClick={removeItem}>Remove</button>
+                    </div>
                 ))}
             </ul>
         </div>

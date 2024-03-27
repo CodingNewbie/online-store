@@ -1,21 +1,31 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Catalog from "./pages/Catalog";
-import Product from "./components/Product";
 import ShoppingList from "./pages/Shoppinglist";
+import Home from "./pages/Home";
+import Admin from "./pages/Admin";
+import About from "./pages/About";
 
 function App() {
     return (
-        <div className="App">
-            <Navbar />
+        <BrowserRouter>
+            <div className="App">
+                <Navbar />
 
-            <Catalog />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/catalog" element={<Catalog />} />
+                    <Route path="/shoppinglist" element={<ShoppingList />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/admin" element={<Admin />} />
+                </Routes>
 
-            <ShoppingList />
-
-            <Footer />
-        </div>
+                <Footer />
+            </div>
+        </BrowserRouter>
     );
 }
 
